@@ -2,7 +2,7 @@
 
 > API examples in Python, Node.js, Go, Rust, Java, and cURL — All using Crazyrouter.
 
-[Crazyrouter](https://crazyrouter.com?ref=github) — One key, 300+ models, 45% cheaper.
+[Crazyrouter](https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community?ref=github) — One key, 300+ models, 45% cheaper.
 
 ## 💰 Price Comparison
 
@@ -16,7 +16,7 @@
 
 ### cURL
 ```bash
-curl https://crazyrouter.com/v1/chat/completions \
+curl https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1/chat/completions \
   -H "Authorization: Bearer sk-your-key" \
   -H "Content-Type: application/json" \
   -d '{"model":"gpt-4o","messages":[{"role":"user","content":"Hello!"}]}'
@@ -28,7 +28,7 @@ from openai import OpenAI
 
 client = OpenAI(
     api_key="sk-your-key",
-    base_url="https://crazyrouter.com/v1"
+    base_url="https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1"
 )
 
 response = client.chat.completions.create(
@@ -44,7 +44,7 @@ import OpenAI from "openai";
 
 const client = new OpenAI({
   apiKey: "sk-your-key",
-  baseURL: "https://crazyrouter.com/v1",
+  baseURL: "https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1",
 });
 
 const response = await client.chat.completions.create({
@@ -66,7 +66,7 @@ import (
 
 func main() {
     config := openai.DefaultConfig("sk-your-key")
-    config.BaseURL = "https://crazyrouter.com/v1"
+    config.BaseURL = "https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1"
     client := openai.NewClientWithConfig(config)
 
     resp, _ := client.CreateChatCompletion(
@@ -89,7 +89,7 @@ OkHttpClient client = new OkHttpClient();
 String json = "{\"model\":\"gpt-4o\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello!\"}]}";
 
 Request request = new Request.Builder()
-    .url("https://crazyrouter.com/v1/chat/completions")
+    .url("https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1/chat/completions")
     .addHeader("Authorization", "Bearer sk-your-key")
     .addHeader("Content-Type", "application/json")
     .post(RequestBody.create(json, MediaType.parse("application/json")))
@@ -104,7 +104,7 @@ System.out.println(response.body().string());
 // Using reqwest
 let client = reqwest::Client::new();
 let response = client
-    .post("https://crazyrouter.com/v1/chat/completions")
+    .post("https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1/chat/completions")
     .header("Authorization", "Bearer sk-your-key")
     .json(&serde_json::json!({
         "model": "gpt-4o",
@@ -127,8 +127,8 @@ for chunk in stream:
 ```
 
 ## 🔗 Links
-- 🌐 [Crazyrouter](https://crazyrouter.com?ref=github)
-- 📖 [API Docs](https://crazyrouter.com/docs)
+- 🌐 [Crazyrouter](https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community?ref=github)
+- 📖 [API Docs](https://crazyrouter.com/docs?utm_source=github&utm_medium=github&utm_campaign=dev_community)
 - 💬 [Telegram](https://t.me/crzrouter)
 
 ## 📄 License
