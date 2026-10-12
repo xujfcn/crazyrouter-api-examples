@@ -2,21 +2,17 @@
 
 > API examples in Python, Node.js, Go, Rust, Java, and cURL — All using Crazyrouter.
 
-[Crazyrouter](https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community?ref=github) — One key, 300+ models, 45% cheaper.
+[Crazyrouter](https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community) — One key, model-specific API access.
 
-## 💰 Price Comparison
+## Current prices
 
-| Model | Official (In/Out per 1M tokens) | Crazyrouter | Savings |
-|-------|--------------------------------|-------------|---------|
-| Claude Opus 4 | $15 / $75 | $8.25 / $41.25 | **45%** |
-| GPT-4o | $2.50 / $10 | $1.38 / $5.50 | **45%** |
-| Gemini 2.5 Pro | $1.25 / $10 | $0.69 / $5.50 | **45%** |
+[Current model prices](https://crazyrouter.com/en/pricing). Rates depend on the model, account group and billing unit; there is no universal discount. Check input, output, cache and task charges before use.
 
 ## 📋 Examples
 
 ### cURL
 ```bash
-curl https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1/chat/completions \
+curl https://crazyrouter.com/v1/chat/completions \
   -H "Authorization: Bearer sk-your-key" \
   -H "Content-Type: application/json" \
   -d '{"model":"gpt-4o","messages":[{"role":"user","content":"Hello!"}]}'
@@ -28,7 +24,7 @@ from openai import OpenAI
 
 client = OpenAI(
     api_key="sk-your-key",
-    base_url="https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1"
+    base_url="https://crazyrouter.com/v1"
 )
 
 response = client.chat.completions.create(
@@ -44,11 +40,11 @@ import OpenAI from "openai";
 
 const client = new OpenAI({
   apiKey: "sk-your-key",
-  baseURL: "https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1",
+  baseURL: "https://crazyrouter.com/v1",
 });
 
 const response = await client.chat.completions.create({
-  model: "claude-sonnet-4-20250514",
+  model: "claude-sonnet-4-6",
   messages: [{ role: "user", content: "Hello!" }],
 });
 console.log(response.choices[0].message.content);
@@ -66,7 +62,7 @@ import (
 
 func main() {
     config := openai.DefaultConfig("sk-your-key")
-    config.BaseURL = "https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1"
+    config.BaseURL = "https://crazyrouter.com/v1"
     client := openai.NewClientWithConfig(config)
 
     resp, _ := client.CreateChatCompletion(
@@ -89,7 +85,7 @@ OkHttpClient client = new OkHttpClient();
 String json = "{\"model\":\"gpt-4o\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello!\"}]}";
 
 Request request = new Request.Builder()
-    .url("https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1/chat/completions")
+    .url("https://crazyrouter.com/v1/chat/completions")
     .addHeader("Authorization", "Bearer sk-your-key")
     .addHeader("Content-Type", "application/json")
     .post(RequestBody.create(json, MediaType.parse("application/json")))
@@ -104,7 +100,7 @@ System.out.println(response.body().string());
 // Using reqwest
 let client = reqwest::Client::new();
 let response = client
-    .post("https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community/v1/chat/completions")
+    .post("https://crazyrouter.com/v1/chat/completions")
     .header("Authorization", "Bearer sk-your-key")
     .json(&serde_json::json!({
         "model": "gpt-4o",
@@ -127,7 +123,7 @@ for chunk in stream:
 ```
 
 ## 🔗 Links
-- 🌐 [Crazyrouter](https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community?ref=github)
+- 🌐 [Crazyrouter](https://crazyrouter.com?utm_source=github&utm_medium=github&utm_campaign=dev_community)
 - 📖 [API Docs](https://crazyrouter.com/docs?utm_source=github&utm_medium=github&utm_campaign=dev_community)
 - 💬 [Telegram](https://t.me/crzrouter)
 
